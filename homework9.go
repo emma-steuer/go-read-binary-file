@@ -46,6 +46,15 @@ func readBinaryFile(filename string) {
 // main function to call the function to read and print the file
 func main() {
 
-	readBinaryFile("Haiku.bin")
+	// initializng variable of the file name
+	var filename string
+
+	// asking the user for input of the file name
+	fmt.Print("Enter the name of your file: ")
+	// assigning the file name to the variable filename
+	fmt.Scanf("%s", &filename)
+
+	// calling the function to read the file
+	readBinaryFile(filename)
 
 }
