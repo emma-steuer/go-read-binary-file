@@ -14,16 +14,16 @@ import (
 func readBinaryFile(filename string) {
 
 	// open the file
-	f, err := os.Open(filename)
+	file, err := os.Open(filename)
 	// catch errors
 	if err != nil {
 		log.Fatal(err)
 	}
 	// specify to close the file later when the function is done
-	defer f.Close()
+	defer file.Close()
 
 	// create a new reader for the file
-	reader := bufio.NewReader(f)
+	reader := bufio.NewReader(file)
 
 	// create slice of bytes
 	buf := make([]byte, 256)
